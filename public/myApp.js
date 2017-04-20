@@ -12,71 +12,133 @@ angular.module('myApp', ['ui.router'])
 				url: '/zhuce',
 				templateUrl: 'temp/zhuce.html'
 		})
-		$stateProvider.state('angular', {
-				url: '/angular',
-				templateUrl: 'temp/angular.html'
-		})
-		$stateProvider.state('css', {
-				url: '/css',
-				templateUrl: 'temp/css.html'
-		})
-		$stateProvider.state('html5', {
-				url: '/html5',
-				templateUrl: 'temp/html5.html'
-		})
-		$stateProvider.state('vue', {
-				url: '/vue',
-				templateUrl: 'temp/vue.html'
-		})
-		$stateProvider.state('javascript', {
-				url: '/javascript',
-				templateUrl: 'temp/javascript.html'
-		})
-		$stateProvider.state('react', {
-				url: '/react',
-				templateUrl: 'temp/react.html'
-		})
-		$stateProvider.state('xprofile', {
-				url: '/xprofile',
-				templateUrl: 'temp/xprofile.html'
-		})
-		$stateProvider.state('node', {
-				url: '/node',
-				templateUrl: 'temp/node.html'
-		})
-		$stateProvider.state('profile', {
-				url: '/profile',
-				templateUrl: 'temp/profile.html'
-		})
-		$stateProvider.state('other', {
-				url: '/other',
-				templateUrl: 'temp/other.html'
-		})
-		$stateProvider.state('jquery', {
-				url: '/jquery',
-				templateUrl: 'temp/jquery.html'
-		})
-		$stateProvider.state('a1', {
+		$stateProvider.state('home.a1', {
 				url: '/a1',
-				templateUrl: 'temp/a1.html'
+				views:{
+					content:{
+						templateUrl: 'temp/a1.html'
+					}
+				}
 		})
-		$stateProvider.state('a2', {
+		$stateProvider.state('home.a2', {
 				url: '/a2',
-				templateUrl: 'temp/a2.html'
+				views:{
+					content:{
+						templateUrl: 'temp/a2.html'
+					}
+				}
 		})
-		$stateProvider.state('a3', {
+		$stateProvider.state('home.a3', {
 				url: '/a3',
-				templateUrl: 'temp/a3.html'
+				views:{
+					content:{
+						templateUrl: 'temp/a3.html'
+					}
+				}
 		})
-		$stateProvider.state('a4', {
+		$stateProvider.state('home.a4', {
 				url: '/a4',
-				templateUrl: 'temp/a4.html'
+				views:{
+					content:{
+						templateUrl: 'temp/a4.html'
+					}
+				}
 		})
-		$stateProvider.state('a5', {
+		$stateProvider.state('home.a5', {
 				url: '/a5',
-				templateUrl: 'temp/a5.html'
+				views:{
+					content:{
+						templateUrl: 'temp/a5.html'
+					}
+				}
 		})
-		$urlRouterProvider.otherwise('/home')
+		$stateProvider.state('home.angular', {
+				url: '/angular',
+				views:{
+					content:{
+						templateUrl: 'temp/angular.html'
+					}
+				}
+		})
+		$stateProvider.state('home.css', {
+				url: '/css',
+				views:{
+					content:{
+						templateUrl: 'temp/css.html'
+					}
+				}
+		})
+		$stateProvider.state('home.html5', {
+				url: '/html5',
+				views:{
+					content:{
+						templateUrl: 'temp/html5.html'
+					}
+				}
+		})
+		$stateProvider.state('home.javascript', {
+				url: '/javascript',
+				views:{
+					content:{
+						templateUrl: 'temp/javascript.html'
+					}
+				}
+		})
+		$stateProvider.state('home.jquery', {
+				url: '/jquery',
+				views:{
+					content:{
+						templateUrl: 'temp/jquery.html'
+					}
+				}
+		})
+		$stateProvider.state('home.node', {
+				url: '/node',
+				views:{
+					content:{
+						templateUrl: 'temp/node.html'
+					}
+				}
+		})
+		$stateProvider.state('home.other', {
+				url: '/other',
+				views:{
+					content:{
+						templateUrl: 'temp/other.html'
+					}
+				}
+		})
+		$stateProvider.state('home.profile', {
+				url: '/profile',
+				views:{
+					content:{
+						templateUrl: 'temp/profile.html'
+					}
+				}
+		})
+		$stateProvider.state('home.react', {
+				url: '/react',
+				views:{
+					content:{
+						templateUrl: 'temp/react.html'
+					}
+				}
+		})
+		$stateProvider.state('home.vue', {
+				url: '/vue',
+				views:{
+					content:{
+						templateUrl: 'temp/vue.html'
+					}
+				}
+		})
+		$stateProvider.state('home.xprofile', {
+				url: '/xprofile',
+				views:{
+					content:{
+						templateUrl: 'temp/xprofile.html'
+					}
+				}
+		})
+		$urlRouterProvider.otherwise('/login')
 	}])
-	.controller('head',['$scope',function($scope){
-}])

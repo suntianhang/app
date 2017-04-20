@@ -1,10 +1,91 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		3
-	</body>
-</html>
+.sth_home{
+	width: 100%;
+}
+.sth_head{
+	width: 100%;
+	height: 10vh;
+	background: rgba(0,0,0,.7);
+}
+.sth_heads{
+	width: 80%;
+	margin: 0 auto;
+}
+.sth_heads>ul{
+	float: right;
+	height: 10vh;
+	position: relative;
+}
+.sth_heads>ul>li{
+	line-height: 10vh;
+	float: left;
+	margin-left: 10px;
+	color: #FFFFFF;
+	
+}
+.sth_heads>ul>li:nth-child(1){
+	height: 100%;
+	width: 60px;
+}
+.sth_heads>ul>li>img{
+	margin-top: 30%;
+	width: 70%;
+	height: 50%;
+	border-radius: 50%;
+}
+.sth_heads>ul:hover .ge{
+	display: block;
+}
+.ge{
+	background: rgba(0,0,0,.8);
+	width: 130px;
+	position: absolute;
+	top: 10vh;
+	left: 10px;
+	display: none;
+}
+.ge p{
+	width: 130px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.ge p:hover{
+	background: #555555;
+}
+.sth_left{
+	width: 15%;
+	height: 90vh;
+	background: rgba(0,0,0,.5);
+	float: left;
+}
+.sth_left>ul>li{
+	line-height: 9vh;
+	text-align: center;
+	font-size: 30px;
+	font-style: italic;
+	font-weight: bold;
+}
+.sth_left>ul>li:hover{
+	background: #000000;
+	color: #FFFFFF;
+}
+.sth_right{
+	float: right;
+	width: 85%;
+	height: 90vh;
+	background: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
