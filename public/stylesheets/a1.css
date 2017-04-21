@@ -1,9 +1,142 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
+.sth_hmoe{
+	width: 100%;
+	height: 100%;
+	background: #F1F1F1;
+}
+.sth_left_1{
+	width: 75%;
+	height: 90vh;
+	float: left;
+	overflow: auto;
+}
+.sth_hmoe_ul{
+	width: 100%;
+	padding-top: 1%;
+	
+}
+.sth_hmoe_ul li{
+	width: 95%;
+	margin-bottom: 10px;
+	margin-left: 2%;
+}
+.sth_hmoe_ul .sth_geren img{
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	border-radius: 50%;
+	margin-right: 1%;
+}
+.sth_zan{
+	text-align: right;
+}
+.sth_zan>span{
+	margin-right: 5px;
+	font-size: 12px;
+	color: #ccc;
+}
+.sth_zan>span a{
+	font-size: 12px;
+	color: #ccc;
+}
+.hover_noe:hover{
+	text-decoration: underline;
+	color: #00B7FF;
+}
+.nei{
+	font-size: 12px;
+	color: #999999;
+	height: 50px;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+.hover:hover{
+	color: palevioletred
+}
+.sth_zan>span:nth-child(3) span{
+	
+}
+.sth_right_ul{
+	width: 23%;
+	float: right;
+	height: 250px;
+	padding-top: 1%;
+	overflow: hidden;
+}
+.sth_right_ul>h2{
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+ .sth_right_ul li{
+ 	width: 100%;
+ 	line-height: 25px;
+ }
+.sth_right_ul li a{
+	width: 85%;
+	font-size: 12px;
+	display: block;
+	color: #999999;
+	white-space: nowrap;
+ 	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+.sth_zan .pi{
+	float: left;
+	margin-top: 7px;
+}
+.sth_zan .pi span{
+	
+	padding-left: 5px;
+}
+.sth_pinglun{
+	background: #fff;
+	border-radius:10px 10px 10px 10px;
+	padding: 1% 1%;
+}
+.sth_pinglun p img{
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+.sth_pinglun p span{
+	font-size: 12px;
+	color: #999999;
+}
+.sth_pinglun div{
+	width: 100%;
+}
+.sth_pinglun .p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 70%;
+	height: 30px;
+	margin-left: 20px;
+	padding-right: 3%;
+	font-size: 12px;
+	color: #999999;
+	overflow: hidden;
+ 	text-overflow: ellipsis;
+}
+.fan{
+	width: 30%;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+
+.sth_right_ul li a:hover{
+	color: #00B7FF;
+	text-decoration: underline;
+}
+.sth_heads>span{
+	float: left;
+	line-height: 10vh;
+	margin-left: -50px;
+	color: #FFFFFF;
+	font-size: 12px;
+	cursor: pointer;
+}
+.sth_heads>span:nth-child(2){
+	margin-left: 20px;
+}
+

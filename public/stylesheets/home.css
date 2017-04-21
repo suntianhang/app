@@ -4,7 +4,7 @@
 .sth_head{
 	width: 100%;
 	height: 10vh;
-	background: rgba(0,0,0,.7);
+	background: #00B7FF;
 }
 .sth_heads{
 	width: 80%;
@@ -48,6 +48,7 @@
 	line-height: 40px;
 	text-align: center;
 	color: #FFFFFF;
+	cursor: pointer;
 }
 .ge p:hover{
 	background: #555555;
@@ -55,15 +56,19 @@
 .sth_left{
 	width: 15%;
 	height: 90vh;
-	background: rgba(0,0,0,.5);
+
 	float: left;
 }
 .sth_left>ul>li{
 	line-height: 9vh;
+	margin-top: 1vh;
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 	font-style: italic;
 	font-weight: bold;
+	background: #449FDB;
+	border-radius: 30px 30px 30px 30px;
+	cursor: pointer;
 }
 .sth_left>ul>li:hover{
 	background: #000000;
@@ -74,13 +79,43 @@
 	width: 85%;
 	height: 90vh;
 	background: #999999;
+	
 }
 
+.sth_left>ul>li:hover{
+	border-radius: 30px 30px 30px 30px;
+	line-height: 10vh;
+	margin-top: 0vh;
+	text-align: center;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+}
 
-
-
-
-
+.sth_in{
+	width: 40%;
+	float: left;
+	line-height: 10vh;
+	margin-left: 27%;
+}
+.sth_in input:nth-child(1){
+	width: 70%;
+	height: 5vh;
+	border-radius: 10px 0 0 10px;
+	outline: none;
+	padding-left: 10px;
+}
+.sth_in input:nth-child(2){
+	width: 20%;
+	height: 5.5vh;
+	background: #00B7FF;
+	vertical-align: middle;
+	border: none;
+	border:1px solid #FFFFFF;
+	color: #FFFFFF;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+}
 
 
 
