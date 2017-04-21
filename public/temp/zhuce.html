@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		1
-	</body>
-</html>
+<canvas id="canvas-club"></canvas>
+<div class="lby_zhuce" ng-controller="zhuce">
+	<div class="content">
+		<h1>知 乎</h1>
+		<p>与世界分享你的知识、经验和见解</p>
+		<div class="anniu">
+			<a href="javascript:;" class="active">注册</a>
+			<a ui-sref="login">登录</a>
+		</div>
+		<div class="table">
+			<input type="text" placeholder="姓名" ng-model="uname"/>
+			<input type="text" placeholder="手机号（仅支持中国大陆）" ng-model="tel"/>
+			<input type="password" placeholder="密码（不少于6位）" ng-model="pwd"/>
+		</div>
+		<button ng-click="btn()">注册知乎</button>
+	</div>
+</div>

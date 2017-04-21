@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		2
-	</body>
-</html>
+<canvas id="canvas-club"></canvas>
+<div class="lby_login" ng-controller="login">
+	<div class="content">
+		<h1>知 乎</h1>
+		<p>与世界分享你的知识、经验和见解</p>
+		<div class="anniu">
+			<a ui-sref="zhuce">注册</a>
+			<a ui-sref="login" class="active">登录</a>
+		</div>
+		<div class="table">
+			<input type="text" ng-model="tel" placeholder="手机号"/>
+			<input type="password" ng-model="pwd" placeholder="密码"/>
+		</div>
+		<button ng-click="login()">登录</button>
+	</div>
+</div>
