@@ -1,5 +1,5 @@
-angular.module('myApp', ['ui.router'])
-	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+
+	app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		$stateProvider.state('home', {
 				url: '/home',
 				templateUrl: 'temp/home.html'
@@ -140,5 +140,5 @@ angular.module('myApp', ['ui.router'])
 					}
 				}
 		})
-		$urlRouterProvider.otherwise('/login')
+		$urlRouterProvider.otherwise('/zhuce')
 	}])

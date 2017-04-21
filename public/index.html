@@ -7,16 +7,19 @@
 		<script src="javascripts/jquery.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/angular.js" type="text/javascript" charset="utf-8"></script>
 		<script src="javascripts/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+
 		<!--JS库-->
 		<!--路由app.js-->
-		<script src="myApp.js" type="text/javascript" charset="utf-8"></script>
+		
+		
 		<!--路由app.js-->
 		
 		<!--初始化css-->
 		<link rel="stylesheet" type="text/css" href="stylesheets/rester.css"/>
 		<link rel="stylesheet" type="text/css" href="stylesheets/svg/font.css"/>
 		<!--初始化css-->
-		
+		<link rel="stylesheet" type="text/css" href="stylesheets/zhuce.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/login.css"/>
 		<!--各页面CSS样式-->
 		<link rel="stylesheet" type="text/css" href="stylesheets/home.css"/>
 
@@ -26,15 +29,22 @@
 		<link rel="stylesheet" type="text/css" href="stylesheets/xprofile.css"/>
 
 		<!--各页面CSS样式-->
+		<script>
+			var app = angular.module("myApp",['ui.router'])
+		</script>
 		
 	</head>
 	<body>
-	<div ui-view></div>
+
+	   <div ui-view></div>
+
 	</body>
 	<!--nodejs-->
 	
 	<!--nodejs-->
-	
+	<script src="myApp.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/zhuce.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascripts/login.js" type="text/javascript" charset="utf-8"></script>
 	
 	<!--各页面JS样式-->
 		<script src="javascripts/profile.js" type="text/javascript" charset="utf-8"></script>

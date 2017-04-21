@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		2
-	</body>
-</html>
+
+.lby_login{
+	width:100%;
+	height:100vh;
+	position: absolute;
+	top:0;
+}
+.lby_login .content{
+	width:300px;
+	overflow: hidden;
+	margin:0 auto;
+	padding-top:100px;
+	text-align: center;
+}
+.lby_login .content h1{
+	font-family: webdings;
+	font-weight: 300;
+	font-size: 60px;
+	color:#666;
+	margin-bottom: 20px;
+}
+.lby_login .content p{
+	font-size:16px ;
+	color: #F3F3F3;
+	margin-bottom: 20px;
+}
+.lby_login .content .anniu{
+	margin-bottom: 20px;
+}
+.lby_login .content .anniu a{
+	display: inline-block;
+	margin-right:15px;
+	padding:0 5px 10px 5px;
+	font-weight:bold ;
+}
+.lby_login .content .anniu .active{
+	color:#666;
+	border-bottom:2px solid #666;
+}
+.lby_login .content .table{
+	width:99%;
+	height:96px;
+	border:1px solid #ccc;
+}
+.lby_login .content .table input{
+	border:none;
+	border-bottom: 1px solid #CCCCCC;
+	width:100%;
+	height:49%;
+	text-indent: 10px;
+}
+.lby_login .content button{
+	width:100%;
+	height:40px;
+	background: #666;
+	color:#F1F1F1;
+	margin-top: 30px;
+	border:none;
+	border-radius: 5px;
+}
