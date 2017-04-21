@@ -9,16 +9,16 @@
 .sth_heads{
 	width: 80%;
 	margin: 0 auto;
+	position: relative;
 }
 .sth_heads>ul{
-	float: right;
+	position: absolute;
 	height: 10vh;
-	position: relative;
+	right: 5%;
 }
 .sth_heads>ul>li{
 	line-height: 10vh;
 	float: left;
-	margin-left: 10px;
 	color: #FFFFFF;
 	
 }
@@ -27,13 +27,13 @@
 	width: 60px;
 }
 .sth_heads>ul>li>img{
-	margin-top: 30%;
+	margin-top: 20px;
 	width: 70%;
 	height: 50%;
 	border-radius: 50%;
 }
 .sth_heads>ul:hover .ge{
-	display: block;
+	height: 120px;
 }
 .ge{
 	background: rgba(0,0,0,.8);
@@ -41,7 +41,9 @@
 	position: absolute;
 	top: 10vh;
 	left: 10px;
-	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: all .5s ease-in-out 0s;
 }
 .ge p{
 	width: 130px;
