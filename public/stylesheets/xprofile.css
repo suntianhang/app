@@ -1,9 +1,159 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
+.ge{
+	z-index: 100;
+}
+.xprofile{
+	width: 100%;
+	height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+.bianji{
+	width:100%;
+	height: 35px;
+	border-bottom: 1px solid black;
+	position: relative;
+	z-index: 0;
+	background: #00B7FF;
+}
+.bianji li{
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	padding: 0 20px;
+	font-size: 16px;
+	position: relative;
+	z-index: 2;
+}
+.bianji li:nth-child(1){
+	border-right: 1px solid black;
+}
+.bjhover{
+	border-bottom: 1px solid white;
+	background: #F3F3F3;
+}
+
+.bj{
+	width: 100%;
+	height: calc(100% - 40px);
+	background: #F3F3F3;
+}
+.bj ul{
+	float: left;
+	height: 100%;
+}
+.bj ul:nth-child(1){
+	width:79%;
+	border-right: 1px solid black;
+}
+.bj ul:nth-child(1) li{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid black;
+	line-height: 50px;
+	font-size: 14px;
+	text-indent: 5%;
+}
+.bj ul:nth-child(1) li input{
+	width:40%;
+	height: 30px;
+	line-height: 30px;
+	border:1px solid transparent;
+	background: white;
+	border-radius: 15px;
+	text-indent: 5%;
+}
+.bj ul:nth-child(1) li:last-child{
+	border:none;
+	text-align: center;
+}
+.bj ul:nth-child(1) li:last-child button:nth-child(1){
+	display: inline-block;
+	width:100px;
+	height: 40px;
+	line-height: 40px;
+	background: red;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+.bj ul:nth-child(1) li:last-child button:nth-child(2){
+	display: inline-block;
+	width:100px;
+	height: 40px;
+	line-height: 40px;
+	background: red;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}
+.bj .right{
+	width:20%;
+}
+#img_file{
+	display: none;
+}
+#img_input{
+	width:90%;
+}
+.bj .right li{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.bj .right li img{
+	width:80%;
+	margin:50px auto;
+}
+
+.xiugai{
+	width: 100%;
+	height: calc(100% - 40px);
+	background: #F3F3F3;
+	position: relative;
+}
+.xiugai ul{
+	text-align: center;
+	position: absolute;
+	width:60%;
+	height: 60%;
+	line-height: 60%;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+.xiugai ul li{
+	width:100%;
+	line-height: 50px;
+}
+.xiugai ul li input{
+	border-radius: 10px;
+	text-indent: 5%;
+}
+.xiugai ul li:last-child{
+	text-align: center;
+	margin-top:40px;
+}
+.xiugai ul li button{
+	display: inline-block;
+	width:100px;
+	height: 40px;
+	line-height: 40px;
+	background: red;
+	border: none;
+	outline: none;
+	font-size: 16px;
+}

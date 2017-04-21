@@ -1,9 +1,29 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
+angular.module('myApp')
+.controller('xprofile',['$scope',function($scope){
+	$scope.a=true;
+	$scope.b=false;
+	$scope.gengxin=true;
+	$scope.qrgengxin=false;
+	$scope.all=true;
+	$scope.name=0;
+	$scope.bj=function(){
+		$scope.a=true;
+		$scope.b=false;
+		$scope.name=0;
+	}
+	$scope.xg=function(){
+		$scope.a=false;
+		$scope.b=true;
+		$scope.name=1;
+	}
+	$scope.gx=function(){
+		$scope.gengxin=false;
+		$scope.qrgengxin=true;
+		$scope.all=false;
+	}
+	$scope.qrgx=function(){
+		$scope.gengxin=true;
+		$scope.qrgengxin=false;
+		$scope.all=true;
+	}
+}])

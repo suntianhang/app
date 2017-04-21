@@ -1,10 +1,128 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-		3
-	</body>
-</html>
+.sth_home{
+	width: 100%;
+}
+.sth_head{
+	width: 100%;
+	height: 10vh;
+	background: #00B7FF;
+}
+.sth_heads{
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+.sth_heads>ul{
+	position: absolute;
+	height: 10vh;
+	right: 5%;
+}
+.sth_heads>ul>li{
+	line-height: 10vh;
+	float: left;
+	color: #FFFFFF;
+	
+}
+.sth_heads>ul>li:nth-child(1){
+	height: 100%;
+	width: 60px;
+}
+.sth_heads>ul>li>img{
+	margin-top: 25%;
+	width: 70%;
+	height: 50%;
+	border-radius: 50%;
+}
+.sth_heads>ul:hover .ge{
+	height: 120px;
+}
+.ge{
+	background: rgba(0,0,0,.8);
+	width: 130px;
+	position: absolute;
+	top: 10vh;
+	left: 10px;
+	height: 0;
+	overflow: hidden;
+	transition: all .5s ease-in-out 0s;
+}
+.ge p{
+	width: 130px;
+	line-height: 40px;
+	text-align: center;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+.ge p:hover{
+	background: #555555;
+}
+.sth_left{
+	width: 15%;
+	height: 90vh;
+
+	float: left;
+}
+.sth_left>ul>li{
+	line-height: 9vh;
+	margin-top: 1vh;
+	text-align: center;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+	background: #449FDB;
+	border-radius: 30px 30px 30px 30px;
+	cursor: pointer;
+}
+.sth_left>ul>li:hover{
+	background: #000000;
+	color: #FFFFFF;
+}
+.sth_right{
+	float: right;
+	width: 85%;
+	height: 90vh;
+	background: #999999;
+	
+}
+
+.sth_left>ul>li:hover{
+	border-radius: 30px 30px 30px 30px;
+	line-height: 10vh;
+	margin-top: 0vh;
+	text-align: center;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.sth_in{
+	width: 40%;
+	float: left;
+	line-height: 10vh;
+	margin-left: 27%;
+}
+.sth_in input:nth-child(1){
+	width: 70%;
+	height: 5vh;
+	border-radius: 10px 0 0 10px;
+	outline: none;
+	padding-left: 10px;
+}
+.sth_in input:nth-child(2){
+	width: 20%;
+	height: 5.5vh;
+	background: #00B7FF;
+	vertical-align: middle;
+	border: none;
+	border:1px solid #FFFFFF;
+	color: #FFFFFF;
+	border-radius: 0 10px 10px 0;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
