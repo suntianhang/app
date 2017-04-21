@@ -1,6 +1,4 @@
 
-	
-//	angular.module("myApp1",['ui.router'])
 	app.controller("zhuce",function($scope,$http,$state){
 		var c = document.getElementById("canvas-club");//获取画布元素
 		var ctx = c.getContext("2d");////创建画布元素的绘画方法
@@ -117,7 +115,7 @@
 				alert('请输入您的密码')
 			}else{
 				$http({
-					url:"http://localhost:3333/a1/register",
+					url:"http://192.168.43.102:3333/a1/register",
 					method:"post",
 					data:{
 						username:$scope.uname,

@@ -1,5 +1,6 @@
-app.controller('login',function($scope,$http,$state){
-	var c = document.getElementById("canvas-club");//获取画布元素
+
+	app.controller("login",function($scope,$http,$state){
+		var c = document.getElementById("canvas-clubs");//获取画布元素
 		var ctx = c.getContext("2d");////创建画布元素的绘画方法
 		var w = c.width = window.innerWidth; //创建一个变量w，并将画布的宽度设置为全屏
 		var h = c.height = window.innerHeight; //创建一个变量h，并将画布的高度设置为全屏
@@ -101,26 +102,32 @@ app.controller('login',function($scope,$http,$state){
 		}, false);
 		setup();
 		anim();
-	$scope.tel="";
-	$scope.pwd="";
-	$scope.login=function(){
-		if($scope.tel==""){
-			alert('请输入您的手机号码')
-		}else if($scope.pwd==""){
-			alert('请输入您的密码')
-		}else{
-			$http({
-				url:"http://localhost：3333/a1/login",
-				method:"post",
-				data:{
-					phone：$scope.tel,
-     				password：$scope.pwd
-				}
-			}),then(function(){
-				
-			},function(){
-				
-			})
+		$scope.uname="";
+		$scope.tel="";
+		$scope.pwd=""
+		$scope.btn=function(){
+		
+			if($scope.uname==""){
+				alert('请输入用户名')
+			}else if($scope.tel==""){
+				alert('请输入您的手机号码')
+			}else if($scope.pwd==""){
+				alert('请输入您的密码')
+			}else{
+				$http({
+					url:"http://localhost：3333/a1/login",
+					method:"post",
+					data:{
+						phone:$scope.tel,
+						password:$scope.pwd
+					}
+					
+				}).then(function(e){
+					console.log(e);
+				},function(){
+					
+				})
+			}
 		}
-	}
-})
+	})
+
