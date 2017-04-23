@@ -31,17 +31,17 @@ angular.module('myApp')
 	}
 	
 	//获取资料
-//	$http({
-//		url:'',
-//		method:'get',
-//		params:{
-//			
-//		}
-//	}).then(function(data){
-//		console.log(data)
-//	},function(data){
-//		
-//	})
+	$http({
+		url:'http://localhost:3333/update/shuju',
+		method:'get',
+		params:{
+			
+		}
+	}).then(function(data){
+		console.log(data)
+	},function(data){
+		
+	})
 	//修改
 //	$scope.qrgx=function(){
 //		$http({

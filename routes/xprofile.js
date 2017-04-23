@@ -3,41 +3,41 @@ var express = require('express');
 var mysql = require('mysql')
 var router = express.Router();
 
-// 链接数据库
-//var pool = mysql.createPool({
-//	host:'192.168.43.102',
-//	user:'root',	//mysql安装时的用户名
-//	password:'sun00.', //mysql安装时的密码
-//	database:'niu', //数据库名称
-//	port:3306  //数据库端口
-//})
+   链接数据库
+var pool = mysql.createPool({
+	host:'192.168.43.102',
+	user:'root',	//mysql安装时的用户名
+	password:'sun00.', //mysql安装时的密码
+	database:'niu', //数据库名称
+	port:3306  //数据库端口
+})
 ////获取个人信息
-//function getAllUsers(callback){
-//	pool.getConnection(function(err,connection){
-//		var sql='select * from list';
-//		connection.query(sql,function(err,result){
-//			console.log("result:"+result);
-//			if(err){
-//				console.log('getAllUsers Error:'+err.message);
-//				return;
-//			}
-//			connection.release();//释放链接
-//			callback(err,result);
-//		})
-//	})
-//}
-//
-//router.get('/shuju',function(request,response){
-//	console.log('into list...')
-//	getAllUsers(function(err,results){
-//		if(err){
-//			response.send(err);
-//		}else if(results){
-//			console.log('>>>'+results);
-//			response.send(results);
-//		}
-//	})
-//})
+function getAllUsers(id,callback){
+	pool.getConnection(function(err,connection){
+		var sql='select * from list where id=?';
+		connection.query(sql,function(err,result){
+			console.log("result:"+result);
+			if(err){
+				console.log('getAllUsers Error:'+err.message);
+				return;
+			}
+			connection.release();//释放链接
+			callback(err,result);
+		})
+	})
+}
+
+router.get('/shuju',function(request,response){
+	console.log('into list...')
+	getAllUsers(function(err,results){
+		if(err){
+			response.send(err);
+		}else if(results){
+			console.log('>>>'+results);
+			response.send(results);
+		}
+	})
+})
 //
 // //跨域
 // router.all('*', function(req, res, next) {
