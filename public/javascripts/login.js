@@ -4,7 +4,7 @@
 		var ctx = c.getContext("2d");////创建画布元素的绘画方法
 		var w = c.width = window.innerWidth; //创建一个变量w，并将画布的宽度设置为全屏
 		var h = c.height = window.innerHeight; //创建一个变量h，并将画布的高度设置为全屏
-		var clearColor = 'rgba(0, 0, 0, .1)';//清除画布的颜色
+		var clearColor = 'rgba(0,0,0,.1)';//清除画布的颜色
 		var max = 40;
 		var drops = [];
 		

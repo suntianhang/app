@@ -1,8 +1,8 @@
 <canvas id="canvas-clubs"></canvas>
 <div class="lby_login" ng-controller="login">
 	<div class="content">
-		<h1>知 乎</h1>
-		<p>与世界分享你的知识、经验和见解</p>
+		<h1>知 道</h1>
+		<p>更深入的了解万千的程序世界</p>
 		<div class="anniu">
 			<a ui-sref="zhuce">注册</a>
 			<a ui-sref="login" class="active">登录</a>
@@ -11,6 +11,7 @@
 			<input type="text" ng-model="tel" placeholder="手机号"/>
 			<input type="password" ng-model="pwd" placeholder="密码"/>
 		</div>
+<<<<<<< HEAD
 		<div class="tishi" ng-show="tishi" ng-click="none()">
 			<div class="alert" ng-show="phone"><span class="span2"></span>少年，你没有输入您的手机号码</div>
 			<div class="alert" ng-show="psd"><span class="span3"></span>没有密码怎么能行</div>
@@ -21,5 +22,8 @@
 				<p class="yu_codeTxt fr" id="yu_codeTxt">看不清，点击换图片</p>
 			</div>
 		<button ng-click="login()">登录</button>
+=======
+		<button ng-click="login()" ui-sref="home">登录</button>
+>>>>>>> origin/master
 	</div>
 </div>

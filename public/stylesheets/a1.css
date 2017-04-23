@@ -140,3 +140,55 @@
 	margin-left: 20px;
 }
 
+
+.sth_fabu{
+	width: 100%;
+	height: 100%;
+	background: #F1F1F1;
+}
+.sth_fabu_1{
+	width: 60%;
+	background: #F1F1F1;
+	float: left;
+	padding-right: 10%;
+}
+
+
+.sth_fabu_1 table{
+	width: 100%;
+	text-align: right;
+	margin-left: 50px;
+}
+.sth_fabu_1 table tr{
+	height: 50px;
+}
+#sth_b{
+	width: 80%;
+height: 30px;
+margin-left: 10px;
+}
+#sth_a{
+width: 80%;
+height: 150px;
+margin-left: 10px;
+}
+
+.sth_right_ul li{
+	border-left:1px solid #ccc ;
+	padding-left: 2%;
+}
+#sth_but{
+	width: 80%;
+	height: 30px;
+}
+.td_1{
+	padding-left: 32px;
+}
+.td_1 select{
+	width: 100px;
+	margin-left: 10px;
+}
+
+.ge{
+	background: rgba(135,206,250,10);
+}
