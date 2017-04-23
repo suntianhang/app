@@ -36,7 +36,7 @@
 	height: 120px;
 }
 .ge{
-	background: rgba(0,0,0,.8);
+	
 	width: 130px;
 	position: absolute;
 	top: 10vh;
@@ -44,6 +44,7 @@
 	height: 0;
 	overflow: hidden;
 	transition: all .5s ease-in-out 0s;
+	background: #00B7FF;
 }
 .ge p{
 	width: 130px;
@@ -67,13 +68,13 @@
 	font-size: 25px;
 	font-style: italic;
 	font-weight: bold;
-	background: #449FDB;
+	background: #00B7FF;
 	border-radius: 30px 30px 30px 30px;
 	cursor: pointer;
 	transition: .5s;
 }
 .sth_left>ul>li:hover{
-	background: #000000;
+	background: rgba(0,0,0,.5);
 	color: #FFFFFF;
 }
 .sth_right{

@@ -1,26 +1,29 @@
-<div class="sth_fabu">
+<div class="sth_fabu" ng-controller="a1">
 	<div class="sth_fabu_1">
 		<table>
 			<tr>
 				<th style="text-align: left;">请写出你的问题</th>
 			</tr>
 			<tr>
-				<td>标题:<input type="text" name="" id="sth_b" value="" /></td>
+				<td>标题:<input type="text" id="sth_b" ng-model="head"/></td>
 			</tr>
 			<tr>
-				<td style="text-align: left;" class="td_1">选择类型:<select name="">
-							<option value="js">js</option>
+				<td style="text-align: left;" class="td_1">选择类型:<select  ng-model="type">
+							<option value="js">javascript</option>
 							<option value="html">html</option>
-							<option value="CSS">CSS</option>
+							<option value="CSS">css</option>
 							<option value="node">node</option>
+							<option value="vue">angular</option>
+							<option value="vue">jquery</option>
+							<option value="vue">other</option>
 							<option value="vue">vue</option>
 						</select></td>
 			</tr>
 			<tr>
-				<td>遇到的问题:<textarea id="sth_a" rows="" cols="" style="vertical-align: top;"></textarea></td>
+				<td>遇到的问题:<textarea id="sth_a" style="vertical-align: top;" ng-model="content"></textarea></td>
 			</tr>
 			<tr>
-				<td><input type="button" name="" id="sth_but" value="发布"/></td>
+				<td><input type="button"  id="sth_but" value="发布" ng-click="odd()"/></td>
 			</tr>
 		</table>
 		
@@ -74,3 +77,6 @@
 		</li>
 	</ul>
 </div>
+<script type="text/javascript">
+	
+</script>
