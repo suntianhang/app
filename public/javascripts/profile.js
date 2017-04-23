@@ -1,1 +1,9 @@
-
+angular.module('myApp')
+.controller('profile',['$scope',function($scope){
+	//点击收藏分类变色
+	$scope.arr=['全部收藏','javascript','css','html','angular']
+	$scope.name=0;
+	$scope.schover=function(index){
+		$scope.name=index
+	}
+}])

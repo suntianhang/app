@@ -10,22 +10,22 @@
 	<div class="bj clearfix" ng-show='a'>
 		<ul class="left">
 			<li>
-				账 号：<span></span>
+				账 号：<span ng-bind='user'></span>
 			</li>
 			<li>
-				昵 称：<input type="text" ng-disabled='all'/>
+				昵 称：<input type="text" ng-disabled='all' ng-model='nicheng'/>
 			</li>
 			<li>
-				电 话：<input type="text" ng-disabled='all'/>
+				电 话：<input type="text" ng-disabled='all' ng-model='tel'/>
 			</li>
 			<li>
-				Q &nbsp;Q：<input type="text" ng-disabled='all'/>
+				Q &nbsp;Q：<input type="text" ng-disabled='all' ng-model='qq'/>
 			</li>
 			<li>
-				邮 箱：<input type="text" ng-disabled='all'/>
+				邮 箱：<input type="text" ng-disabled='all' ng-model='email'/>
 			</li>
 			<li>
-				地 址：<input type="text" ng-disabled='all'/>
+				地 址：<textarea type="text" ng-disabled='all' ng-model='address' rows="5"></textarea>
 			</li>
 			<li>
 				<button ng-show='gengxin' ng-click='gx()'>更新</button>
@@ -58,54 +58,5 @@
 		</ul>
 	</div>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<!--图片压缩-->
-	<!--window.onload = function() {
-    var input = document.getElementById("img_input");
-    var result = document.getElementById("result");
-    var img_area = document.getElementById("img_area");
-    if (typeof(FileReader) === 'undefined') {
-        result.innerHTML = "FileReader is not supported...";
-        input.setAttribute('disabled', 'disabled');
-    } else {
-        input.addEventListener('change', readFile, false);
-    }
-};
-
-function readFile() {
-    var file = this.files[0];
-    if (!/image\/\w+/.test(file.type)) {
-        alert("image only please.");
-        return false;
-    }
-    var reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function(e) {
-        var img = new Image,
-            width = 640, //image resize
-            quality = 0.8, //image quality
-            canvas = document.createElement("canvas"),
-            drawer = canvas.getContext("2d");
-        img.src = this.result;
-        img.onload = function() {
-            canvas.width = width;
-            canvas.height = width * (img.height / img.width);
-            drawer.drawImage(img, 0, 0, canvas.width, canvas.height);
-            img.src = canvas.toDataURL("image/jpeg", quality);
-            console.log(img.src);
-            result.innerHTML = '<img src="' + img.src + '" alt=""/>';
-            img_area.innerHTML = '<div class="sitetip">preview：</div><img src="' + img.src + '" alt=""/>';
-        }
-    }
-}-->
 	
 </div>
