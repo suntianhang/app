@@ -1,5 +1,5 @@
 
-	app.controller("login",function($scope,$http,$state){
+	app.controller("login",function($scope,$http,$state,$location){
 		var c = document.getElementById("canvas-clubs");//获取画布元素
 		var ctx = c.getContext("2d");////创建画布元素的绘画方法
 		var w = c.width = window.innerWidth; //创建一个变量w，并将画布的宽度设置为全屏
@@ -102,32 +102,84 @@
 		}, false);
 		setup();
 		anim();
-		$scope.uname="";
-		$scope.tel="";
-		$scope.pwd=""
-		$scope.btn=function(){
-		
-			if($scope.uname==""){
-				alert('请输入用户名')
-			}else if($scope.tel==""){
-				alert('请输入您的手机号码')
-			}else if($scope.pwd==""){
-				alert('请输入您的密码')
-			}else{
-				$http({
-					url:"http://localhost：3333/a1/login",
-					method:"post",
-					data:{
-						phone:$scope.tel,
-						password:$scope.pwd
+		$(document).ready(function(){
+	
+	function createCode() {
+			code = '';
+			var codeLength = 4;
+			var random = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z');
+			for(var i = 0; i < codeLength; i++) {
+				var index = Math.floor(Math.random() * 36);
+				code += random[index];
+			}
+//			console.log($('.yu_codeImg').text())
+			
+			$('.yu_codeImg').text(code)
+				$scope.uname="";
+				$scope.tel="";
+				$scope.pwd="";
+				$scope.tishi=false;
+				$scope.phone=false;
+				$scope.psd=false;
+				function dianji(){
+					$scope.none=function(){
+						$scope.tishi=false;
+					}
+				}
+				$scope.login=function(){
+					if($scope.tel==""){
+						$scope.tishi=true;
+						$scope.phone=true;
+						dianji();
+					}else if($scope.pwd==""){
+						$scope.tishi=true;
+						$scope.psd=true;
+						dianji();
+					}else{
+						if(code==$scope.yzm){
+						$http({
+							url:"http://192.168.43.102:3333/a1/login",
+							method:"post",	
+//							data:{
+//								phone:MD5(MD5($scope.tel)),
+//								password:MD5(MD5($scope.pwd))
+//							},
+							data:"&password="+$scope.pwd +"&phone=" +$scope.tel,
+							headers: {
+								'Content-Type': 'application/x-www-form-urlencoded'
+								}
+							}).then(function(e){
+								//console.log(e.data[0].id);
+								if(e.data.flag==1){
+									alert('手机号码没有注册，请您先注册')
+								}else if(e.data.flag==3){
+									alert('密码错误')
+								}else{
+									alert('登陆成功')
+									localStorage.id=e.data[0].id
+									$location.url('/home')
+								}
+							},function(){
+								alert('err')
+							})
+						}else{
+							alert('请输入正确的验证码')
+						}
 					}
 					
-				}).then(function(e){
-					console.log(e);
-				},function(){
-					dsadsadsa
-				})
-			}
+					
+				}
 		}
+		
+	$("#yu_codeTxt").click(function(){
+//		console.log(1)
+		createCode()
+	})
+	
+	
+	
+	createCode();
+})
+	
 	})
 

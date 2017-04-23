@@ -1,5 +1,40 @@
 
-	app.controller("zhuce",function($scope,$http,$state){
+	app.controller("zhuce",function($scope,$http,$state,$location){
+		
+		$(function(){
+		var useryz=/^[0-9a-zA-Z\u4e00-\u9fa5_]{3,16}$/;
+		var pwd,phone;
+		var pwdyz=/^\w{6,}$/;
+		$("#pwd").bind('input propertychange',function(){
+			if($(this).val().match(pwdyz)){
+				pwd=true;
+				$(this).next().html('√').css({'color':'#6AC75B','fontSize':'20px'});
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('密码长度不能少于6位').css({'color':'gold','fontSize':'16px'});
+				}
+			}
+		})
+		var phoneyz=/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+		$("#phe").bind('input propertychange',function(){
+			if($(this).val().match(phoneyz)){
+				phone=true;
+				$(this).next().html('√').css({'color':'#6AC75B','fontSize':'20px'});
+			}else{
+				if($(this).val()==""){
+					$(this).next().html('');
+				}else{
+					$(this).next().html('请填写正确的手机号码').css({'color':'gold','fontSize':'16px'});
+				}
+			}
+		})
+	})
+		
+		
+		
+		
 		var c = document.getElementById("canvas-club");//获取画布元素
 		var ctx = c.getContext("2d");////创建画布元素的绘画方法
 		var w = c.width = window.innerWidth; //创建一个变量w，并将画布的宽度设置为全屏
@@ -104,29 +139,54 @@
 		anim();
 		$scope.uname="";
 		$scope.tel="";
-		$scope.pwd=""
+		$scope.pwd="";
+		$scope.name=false;
+		$scope.tishi=false;
+		$scope.phone=false;
+		$scope.psd=false;
+		function dianji(){
+			$scope.none=function(){
+				$scope.tishi=false;
+			}
+		}
 		$scope.btn=function(){
-		
 			if($scope.uname==""){
-				alert('请输入用户名')
+				$scope.tishi=true;
+				$scope.name=true;
+				dianji();
 			}else if($scope.tel==""){
-				alert('请输入您的手机号码')
+				$scope.tishi=true;
+				$scope.phone=true;
+				dianji();
 			}else if($scope.pwd==""){
-				alert('请输入您的密码')
+				$scope.tishi=true;
+				$scope.psd=true;
+				dianji();
 			}else{
+				//alert(MD5($scope.uname))
 				$http({
 					url:"http://192.168.43.102:3333/a1/register",
 					method:"post",
-					data:{
-						username:$scope.uname,
-						phone:$scope.tel,
-						password:$scope.pwd
+					//data:{
+//						username:MD5(MD5($scope.uname)),
+//						phone:MD5(MD5($scope.tel)),
+//						password:MD5(MD5($scope.pwd))
+						
+					//},
+					data:"username="+$scope.uname +"&password="+$scope.pwd +"&phone=" +$scope.tel,
+					headers: {
+						'Content-Type': 'application/x-www-form-urlencoded'
 					}
-					
 				}).then(function(e){
-					console.log(e);
+					//console.log(e.data.msg);
+					if(e.data.msg==1){
+						alert('注册成功')
+						$location.url('/login')
+					}else if(e.data==2){
+						alert('失败')
+					}
 				},function(){
-					
+					alert('err')
 				})
 			}
 		}
