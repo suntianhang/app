@@ -11,6 +11,15 @@
 			<input type="text" ng-model="tel" placeholder="手机号"/>
 			<input type="password" ng-model="pwd" placeholder="密码"/>
 		</div>
+		<div class="tishi" ng-show="tishi" ng-click="none()">
+			<div class="alert" ng-show="phone"><span class="span2"></span>少年，你没有输入您的手机号码</div>
+			<div class="alert" ng-show="psd"><span class="span3"></span>没有密码怎么能行</div>
+		</div>
+		<div class="log_c">
+				<input type="text" id="wyh_code" class="wyh_code  form-control  fl" placeholder="请输入验证码" ng-model="yzm">
+				<div class="yu_codeImg fl"></div>
+				<p class="yu_codeTxt fr" id="yu_codeTxt">看不清，点击换图片</p>
+			</div>
 		<button ng-click="login()">登录</button>
 	</div>
 </div>

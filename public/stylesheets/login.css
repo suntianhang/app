@@ -48,6 +48,8 @@
 	width:100%;
 	height:49%;
 	text-indent: 10px;
+	background:rgba(0,0,0,0.5);
+	color:#F3F3F3;
 }
 .lby_login .content button{
 	width:100%;
@@ -57,4 +59,80 @@
 	margin-top: 30px;
 	border:none;
 	border-radius: 5px;
+}
+.log_c{
+	width:300px;
+	height:50px;
+	margin-top:20px;
+}
+
+.wyh_code{
+	width:30%;
+	height:40px;
+	border-radius: 5px;
+	border:none;
+	text-indent: 5px;
+	background:rgba(0,0,0,0.5);
+	color:#F3F3F3;
+	border:1px solid #ccc;
+}
+.yu_codeImg{
+	width:25%;
+	height:40px;
+	margin:0 20px;
+	background: rgba(0,0,0,0.5);
+	line-height:40px;
+	cursor: cell;
+	border-radius: 5px;
+	color:#333333;
+	color:#F3F3F3;
+}
+#yu_codeTxt{
+	float: left;
+	width:30%;
+	height:40px;
+	font-size: 12px;
+	cursor: pointer;
+	line-height:20px;
+	
+}
+.tishi{
+	width:100%;
+	height: 100vh;
+	background:rgba(0,0,0,.8);
+	position: absolute;
+	top:0;
+	left:0;
+}
+.tishi .alert{
+	width:300px;
+	height:150px;
+	background:#C0C0C0;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;
+	border-radius: 20px;
+	text-align:center;
+	color:#333333;
+	font-weight: bold;
+}
+.tishi .alert .span2{
+	display:block;
+	background:url(../images/tubiao.jpg) no-repeat -168px -172px;
+	width:59px;
+	height:46px;
+	margin:0 auto;
+	margin-top:25px;
+	margin-bottom:10px;
+}
+.tishi .alert .span3{
+	display:block;
+	background:url(../images/tubiao.jpg) no-repeat -26px -98px;
+	width:59px;
+	height:46px;
+	margin:0 auto;
+	margin-top:25px;
+	margin-bottom:10px;
 }
