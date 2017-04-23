@@ -41,15 +41,31 @@ body{
 }
 .lby_zhuce .content .table{
 	width:99%;
-	height:147px;
+	overflow: hidden;
 	border:1px solid #ccc;
+	position: relative;
 }
 .lby_zhuce .content .table input{
 	border:none;
 	border-bottom: 1px solid #CCCCCC;
 	width:100%;
-	height:33%;
+	height:49px;
 	text-indent: 10px;
+	background: rgba(0,0,0,0.5);
+	color:#F3F3F3
+}
+.lby_zhuce .content .table input:nth-child(3){
+	border:none;
+}
+.lby_zhuce .content .table .sjyz{
+	position: absolute;
+	top:65px;
+	right:10px;
+}
+.lby_zhuce .content .table .mmyz{
+	position: absolute;
+	top:115px;
+	right:10px;
 }
 .lby_zhuce .content button{
 	width:100%;
@@ -59,4 +75,53 @@ body{
 	margin-top: 30px;
 	border:none;
 	border-radius: 5px;
+}
+.tishi{
+	width:100%;
+	height: 100vh;
+	background:rgba(0,0,0,0.9);
+	position: absolute;
+	top:0;
+}
+.tishi .alert{
+	width:300px;
+	height:150px;
+	background:#C0C0C0;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-150px;
+	margin-top:-75px;
+	border-radius: 20px;
+	text-align:center;
+	color:#333333;
+	font-weight: bold;
+	
+}
+.tishi .alert .span1{
+	display:block;
+	background:url(../images/tubiao.jpg) no-repeat -92px -30px;
+	width:59px;
+	height:46px;
+	margin:0 auto;
+	margin-top:25px;
+	margin-bottom:10px;
+}
+.tishi .alert .span2{
+	display:block;
+	background:url(../images/tubiao.jpg) no-repeat -168px -172px;
+	width:59px;
+	height:46px;
+	margin:0 auto;
+	margin-top:25px;
+	margin-bottom:10px;
+}
+.tishi .alert .span3{
+	display:block;
+	background:url(../images/tubiao.jpg) no-repeat -26px -98px;
+	width:59px;
+	height:46px;
+	margin:0 auto;
+	margin-top:25px;
+	margin-bottom:10px;
 }

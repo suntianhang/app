@@ -9,9 +9,16 @@
 		</div>
 		<div class="table">
 			<input type="text" placeholder="姓名" ng-model="uname"/>
-			<input type="text" placeholder="手机号（仅支持中国大陆）" ng-model="tel"/>
-			<input type="password" placeholder="密码（不少于6位）" ng-model="pwd"/>
+			<input type="text" placeholder="手机号（仅支持中国大陆）" ng-model="tel" id="phe"/>
+			<p class="sjyz"></p>
+			<input type="password" placeholder="密码（不少于6位）" ng-model="pwd" id="pwd"/>
+			<p class="mmyz"></p>
 		</div>
 		<button ng-click="btn()">注册知乎</button>
+	</div>
+	<div class="tishi" ng-show="tishi" ng-click="none()">
+		<div class="alert" ng-show="name"><span class="span1"></span>你怎么可以不输入名字!</div>
+		<div class="alert" ng-show="phone"><span class="span2"></span>宝贝儿，没有手机号码不能注册喔~</div>
+		<div class="alert" ng-show="psd"><span class="span3"></span>没有密码怎么能行</div>
 	</div>
 </div>
