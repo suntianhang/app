@@ -9,8 +9,8 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var home = require('./routes/home');
-var javascript = require('./routes/javascript');
-
+var jsjs = require('./routes/javascript');
+var a1 = require('./routes/a1');
 var profile = require('./routes/profile');
 var xprofile = require('./routes/xprofile');
 
@@ -33,8 +33,8 @@ app.use('/', index);
 app.use('/users', users);
 
 app.use('/list', home);
-app.use('/js', javascript);
-
+app.use('/jsjs', jsjs);
+app.use('/a1',a1)
 app.use('/my', profile);
 app.use('/update', xprofile);
 
