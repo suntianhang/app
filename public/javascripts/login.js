@@ -142,7 +142,7 @@
 					}else{
 						if(code==$scope.yzm){
 						$http({
-							url:"http://192.168.43.102:3333/a1/login",
+							url:"http://localhost:3333/a1/login",
 							method:"post",	
 //							data:{
 //								phone:MD5(MD5($scope.tel)),
@@ -164,7 +164,7 @@
 									dianji();
 								}else{//登陆成功
 									localStorage.id=e.data[0].id
-									sessionStorage.yonghu=1;
+									//sessionStorage.yonghu=1;
 									$location.url('/home')
 								}
 							},function(){

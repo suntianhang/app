@@ -165,7 +165,7 @@
 			}else{
 				//alert(MD5($scope.uname))
 				$http({
-					url:"http://192.168.43.102:3333/a1/register",
+					url:"http://localhost:3333/a1/register",
 					method:"post",
 					//data:{
 //						username:MD5(MD5($scope.uname)),

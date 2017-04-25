@@ -2,7 +2,7 @@ var express = require('express');
 var mysql = require('mysql');
 var router = express.Router();
 var pool = mysql.createPool({
-	host:'127.0.0.1',
+	host:'192.168.43.102',
 	user:'root',
 	password:'sun00.',
 	database:'niu',
@@ -31,6 +31,7 @@ router.post('/login', function(req, res) {
 				})
 			}else{
 				if(password = result[0].password){
+					req.session.phone=phone;
 					res.send(result)
 				}else{
 					res.send({

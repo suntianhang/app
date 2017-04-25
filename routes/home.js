@@ -20,14 +20,19 @@ router.all('*', function(req, res, next) {
 });
 router.get('/list', function(request, response) { //请求参数    ，  响应参数
 	console.log('我是一个兵')
-	getALLUsers(function(err, results) {
-		if(err) {
-			response.send(err)
-		} else if(results) {
-			console.log('>>>' + results)
-			response.send(results)
-		}
-	})
+	if(request.session.phone!=''&&request.session.phone!=null){
+		getALLUsers(function(err, results) {
+			if(err) {
+				response.send(err)
+			} else if(results) {
+				console.log('>>>' + results)
+				response.send(results)
+			}
+		})
+	}else{
+		response.send({flag:1})
+	}
+	
 })
 //获取后台列表信息
 function getALLUsers(callback) {
