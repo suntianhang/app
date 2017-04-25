@@ -1,9 +1,43 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
+
+<div class="guanli">
+	<div class="header">
+		<a href="javascript:;">客户端页面</a>
+		<p>后台管理页面</p>
+		<span>退出登录</span>
+	</div>
+	<nav>
+		<ul>
+			<li>发布新闻</li>
+			<li class="li2"><span>+</span>删除贴子
+				<ul class="ul2">
+					<li><a href="javascript:;">Javascript</a></li>
+					<li><a href="javascript:;">Html5</a></li>
+					<li><a href="javascript:;">Css</a></li>
+					<li><a href="javascript:;">Node</a></li>
+					<li><a href="javascript:;">Vue</a></li>
+					<li><a href="javascript:;">Angular</a></li>
+					<li><a href="javascript:;">React</a></li>
+					<li><a href="javascript:;">Others</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="tiezi"  ng-controller="guanli">
+		
+	</div>
+	<div class="news">
+		<p>标题：</p>
+		<input type="text" placeholder="新闻标题" ng-model="title">
+		<p>内容：</p>
+		<textarea></textarea>
+		<button>发布</button>
+	</div>
+</div>
+<script>
+	$('.li2').mouseover(function(){
+		$('.ul2').height('350px')
+	})
+	$('.li2').mouseout(function(){
+			$('.ul2').height('0')
+		})
+</script>

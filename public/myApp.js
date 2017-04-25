@@ -12,6 +12,10 @@
 				url: '/zhuce',
 				templateUrl: 'temp/zhuce.html'
 		})
+		$stateProvider.state('a2', {
+				url: '/a2',
+						templateUrl: 'temp/a2.html'
+		})
 		$stateProvider.state('home.a1', {
 				url: '/a1',
 				views:{
@@ -20,14 +24,7 @@
 					}
 				}
 		})
-		$stateProvider.state('home.a2', {
-				url: '/a2',
-				views:{
-					content:{
-						templateUrl: 'temp/a2.html'
-					}
-				}
-		})
+		
 		$stateProvider.state('home.a3', {
 				url: '/a3',
 				views:{
@@ -140,5 +137,5 @@
 					}
 				}
 		})
-		$urlRouterProvider.otherwise('/zhuce')
+		$urlRouterProvider.otherwise('/login')
 	}])
