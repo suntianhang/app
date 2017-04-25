@@ -18,11 +18,32 @@ router.all('*', function(req, res, next) {
 	res.header("Content-Type", "application/json;charset=utf-8");
 	next();
 });
-router.get('/js', function(request, response) { //请求参数    ，  响应参数
-	console.log('hahah')
-	response.send('a')
+
+router.get('/jsjs', function(request, response) { //请求参数    ，  响应参数
+	console.log('我是一个兵')
+	getALLUser(function(err, results) {
+		if(err) {
+			response.send(err)
+		} else if(results) {
+			console.log('>>>' + results)
+			response.send(results)
+		}
+	})
 })
-
-
+//获取后台列表信息
+function getALLUser(callback) {
+	pool.getConnection(function(err, conn) {
+		var getALLUsers_Sql = "select * from news where type = 'javascript'";//查询user表中的所有数据
+		conn.query(getALLUsers_Sql, function(err, result) {
+			console.log('result:' + result)
+			if(err) {
+				console.log("getALLUsers Error:" + err.message);
+				return
+			}
+			conn.release(); //释放链接
+			callback(err, result)
+		})
+	})
+}
 
 module.exports = router;

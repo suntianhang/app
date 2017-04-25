@@ -121,9 +121,13 @@
 				$scope.tishi=false;
 				$scope.phone=false;
 				$scope.psd=false;
+				$scope.tishi2=false;
+				$scope.phone2=false;
+				$scope.psd2=false;
 				function dianji(){
 					$scope.none=function(){
 						$scope.tishi=false;
+						$scope.tishi2=false;
 					}
 				}
 				$scope.login=function(){
@@ -150,13 +154,17 @@
 								}
 							}).then(function(e){
 								//console.log(e.data[0].id);
-								if(e.data.flag==1){
-									alert('手机号码没有注册，请您先注册')
-								}else if(e.data.flag==3){
-									alert('密码错误')
-								}else{
-									alert('登陆成功')
+								if(e.data.flag==1){ //手机号码错误
+									$scope.tishi2=true;
+									$scope.phone2=true;
+									dianji();
+								}else if(e.data.flag==3){//密码错误
+									$scope.tishi2=true;
+									$scope.psd2=true;
+									dianji();
+								}else{//登陆成功
 									localStorage.id=e.data[0].id
+									sessionStorage.yonghu=1;
 									$location.url('/home')
 								}
 							},function(){
