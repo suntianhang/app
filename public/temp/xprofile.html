@@ -18,6 +18,9 @@
 			<li>
 				电 话：<input type="text" ng-disabled='all' ng-model='tel'/>
 			</li>
+			<!--<li>
+				职 业：<input type="text" ng-disabled='all' ng-model='occ'/>
+			</li>-->
 			<li>
 				Q &nbsp;Q：<input type="text" ng-disabled='all' ng-model='qq'/>
 			</li>
@@ -34,10 +37,13 @@
 		</ul>
 		<ul class="right">
 			<li>
-				<img src="../images/ba39295eb922ccd1aaeb716441fe77ab.jpg" alt="" />
-				<input type="file" value="image" id="img_input" />
-				<textarea id="img_file"></textarea>
-				<p id="img_area"></p>
+				<img src="../images/download/{{img}}" alt="" />
+				<input type="file" value="image" id="img_input"/>
+				<button ng-click='uPload()' ng-disabled='dian' class="sub">提交</button>
+			</li>
+			<li class="zhezao" ng-show='zhe'>
+				<p>提交成功</p>
+				<p ng-click="zhezao()">确定</p>
 			</li>
 		</ul>
 	</div>

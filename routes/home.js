@@ -19,12 +19,10 @@ router.all('*', function(req, res, next) {
 	next();
 });
 router.get('/list', function(request, response) { //请求参数    ，  响应参数
-	console.log('我是一个兵')
 	getALLUsers(function(err, results) {
 		if(err) {
 			response.send(err)
 		} else if(results) {
-			console.log('>>>' + results)
 			response.send(results)
 		}
 	})
@@ -34,7 +32,7 @@ function getALLUsers(callback) {
 	pool.getConnection(function(err, conn) {
 		var getALLUsers_Sql = 'select * from news';//查询user表中的所有数据
 		conn.query(getALLUsers_Sql, function(err, result) {
-			console.log('result:' + result)
+			
 			if(err) {
 				console.log("getALLUsers Error:" + err.message);
 				return
@@ -49,13 +47,11 @@ function getALLUsers(callback) {
 
 
 router.post('/fabu', function(request, response) { //请求参数    ，  响应参数
-	console.log('用户注册')
 	var type = request.body.type;
 	var headline = request.body.headline;
 	var content = request.body.content;
 	var times = request.body.times;
 			save(type,headline,content,times,function(err,results){
-				console.log('成功:' + results)
 				if(results){
 					response.send({flag:1,results:results}) //注册成功
 				}
@@ -77,5 +73,9 @@ function save(type,headline,content,times,callback){
 	}) 
 }
 
-
+////清除session
+//router.get('/clear', function(request, response) { //请求参数    ，  响应参数
+//	console.into('退出')
+//	request.session.destroy()
+//})
 module.exports = router;

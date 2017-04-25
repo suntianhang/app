@@ -1,9 +1,24 @@
 angular.module('myApp')
-.controller('profile',['$scope',function($scope){
+.controller('profile',['$scope','$http',function($scope,$http){
 	//点击收藏分类变色
 	$scope.arr=['全部收藏','javascript','css','html','angular']
 	$scope.name=0;
 	$scope.schover=function(index){
 		$scope.name=index
 	}
+	$http({
+		url:'http://localhost:3333/update/shuju',
+		method:'get',
+		params:{
+			id:localStorage.id
+		}
+	}).then(function(data){
+		console.log(data.data[0])
+		$scope.imgSrc=data.data[0].src
+		localStorage.img_src=data.data[0].src
+		$scope.nc=data.data[0].name
+		$scope.email=data.data[0].email
+	},function(data){
+		alert('err')
+	})
 }])

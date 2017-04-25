@@ -113,12 +113,14 @@
 
 .bj .right{
 	width:20%;
+	position: relative;
 }
 #img_file{
 	display: none;
 }
 #img_input{
 	width:90%;
+	margin-bottom: 3vh;
 }
 .bj .right li{
 	width: 100%;
@@ -127,9 +129,26 @@
 }
 .bj .right li img{
 	width:80%;
+	height: 20%;
 	margin:50px auto;
+	border: none;
 }
-
+.bj .right .zhezao{
+	background: #A85E33;
+	position: fixed;
+	height:200px;
+	width:500px;
+	text-align: center;
+	left: 0;
+	top:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	font-size: 26px;
+}
+.bj .right .zhezao p:first-child{
+	margin:50px 0;
+}
 .xiugai{
 	width: 100%;
 	height: calc(100% - 40px);
